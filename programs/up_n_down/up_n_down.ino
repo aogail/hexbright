@@ -25,6 +25,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include <hexbright.h>
 #include <Wire.h>
+#include <i2cmaster.h>
 #include <EEPROM.h>
 
 #if (DEBUG==DEBUG_PROGRAM)
