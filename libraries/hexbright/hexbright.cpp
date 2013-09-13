@@ -36,6 +36,7 @@ either expressed or implied, of the FreeBSD Project.
 #else
 #include "includes/pin_interface.h"
 #include "../digitalWriteFast/digitalWriteFast.h"
+#include "../i2cmaster/i2cmaster.h"
 #endif
 
 // Pin assignments
@@ -90,7 +91,7 @@ void hexbright::init_hardware() {
 #if (DEBUG!=DEBUG_OFF)
   // Initialize serial busses
   Serial.begin(9600);
-  Wire.begin();
+  i2c_master_init();
   Serial.println("DEBUG MODE ON");
 #endif
 
